@@ -1,3 +1,13 @@
+function fitCalendar(){
+  const screen=document.getElementById('screen-calendar');
+  if(!screen.classList.contains('active'))return;
+  const dow=screen.querySelector('.cal-dow');
+  const days=document.getElementById('cal-days');
+  const nav=document.querySelector('.nav');
+  const available=nav.getBoundingClientRect().top-dow.getBoundingClientRect().bottom-8;
+  days.style.height=Math.max(available,200)+'px';
+}
+
 function renderCalendar(){
   const label=document.getElementById('cal-month-label');
   const daysEl=document.getElementById('cal-days');
@@ -38,6 +48,7 @@ function renderCalendar(){
     }
     daysEl.appendChild(cell);
   }
+  fitCalendar();
 }
 function makeDot(color){
   const d=document.createElement('div');d.className='cal-cover-dot';d.style.background=color;return d;

@@ -53,7 +53,10 @@ function renderAll(){
 
     const item=document.createElement('div');item.className='book-item';
     item.innerHTML=`
-      <div class="book-color-bar" style="background:${b.color}"></div>
+      <div class="book-color-wrap" style="background:${b.color}22">
+        <div class="book-color-bar" style="background:${b.color}"></div>
+        <input type="color" value="${b.color}" onchange="changeBookColor('${b.id}',this.value)">
+      </div>
       ${b.coverUrl?`<img class="book-cover-thumb" src="${esc(b.coverUrl)}" alt="" onerror="this.style.display='none'">` :''}
       <div class="book-main">
         <div class="book-title-row">
@@ -142,6 +145,11 @@ function addBook(){
   const trackType=document.querySelector('input[name="track-type"]:checked').value;
   books.push({id:uid(),title,color,trackType,coverUrl:foundCoverUrl,finished:false,addedAt:today()});
   save();closeOverlay('overlay-add');renderAll();
+}
+
+function changeBookColor(bookId, color){
+  const b=books.find(x=>x.id===bookId);if(!b)return;
+  b.color=color;save();renderAll();
 }
 
 function askDelete(bookId){

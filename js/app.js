@@ -4,7 +4,7 @@ function showScreen(name){
   document.getElementById('screen-'+name).classList.add('active');
   document.getElementById('nav-'+name).classList.add('active');
   if(name==='reading')renderAll();
-  if(name==='calendar')renderCalendar();
+  if(name==='calendar'){renderCalendar();fitCalendar();}
   if(name==='finished')renderFinished();
 }
 
@@ -13,6 +13,9 @@ function closeOverlay(id){document.getElementById(id).classList.remove('open')}
 document.querySelectorAll('.overlay').forEach(o=>o.addEventListener('click',e=>{if(e.target===o)o.classList.remove('open')}));
 
 let rt;
-window.addEventListener('resize',()=>{clearTimeout(rt);rt=setTimeout(()=>{if(document.getElementById('screen-reading').classList.contains('active'))buildGrass()},100)});
+window.addEventListener('resize',()=>{clearTimeout(rt);rt=setTimeout(()=>{
+  if(document.getElementById('screen-reading').classList.contains('active'))buildGrass();
+  if(document.getElementById('screen-calendar').classList.contains('active'))fitCalendar();
+},100)});
 
 renderAll();
