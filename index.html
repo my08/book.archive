@@ -109,14 +109,17 @@
           <label>title</label>
           <input type="text" id="new-book-title" placeholder="book title" autocomplete="off" oninput="onBookTitleInput()">
         </div>
-        <div class="cover-box" id="cover-box" onclick="toggleCoverUrl()" style="cursor:pointer">
-          <span class="cover-box-ph" id="cover-placeholder-el">?</span>
-          <img id="cover-img" class="cover-box-img" style="display:none" alt="cover">
+        <div style="display:flex;flex-direction:column;align-items:center;gap:4px">
+          <div class="cover-box" id="cover-box">
+            <span class="cover-box-ph" id="cover-placeholder-el">?</span>
+            <img id="cover-img" class="cover-box-img" style="display:none" alt="cover">
+          </div>
+          <span id="cover-url-toggle" onclick="toggleCoverUrl()" style="font-size:9px;color:var(--ink3);cursor:pointer;letter-spacing:.05em;text-decoration:underline;white-space:nowrap">url</span>
         </div>
       </div>
       <div class="form-group" id="cover-url-group" style="display:none">
-        <label>cover url</label>
-        <input type="url" id="cover-url-input" placeholder="paste image url" oninput="onCoverUrlInput()">
+        <label>cover image url</label>
+        <input type="url" id="cover-url-input" placeholder="https://..." oninput="onCoverUrlInput()">
       </div>
       <div class="form-group">
         <label>track by</label>
