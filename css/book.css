@@ -1,0 +1,19 @@
+.book-list{padding:0 13px 16px}
+
+.swipe-wrap{position:relative;overflow:hidden;border-radius:var(--r);margin-bottom:5px}
+.swipe-del-bg{position:absolute;right:0;top:0;bottom:0;width:70px;background:var(--red);display:flex;align-items:center;justify-content:center;border-radius:0 var(--r) var(--r) 0}
+.swipe-del-bg svg{width:16px;height:16px;stroke:#fff;fill:none;stroke-width:1.8}
+.book-item{display:flex;align-items:stretch;background:var(--bg2);border:1px solid var(--border);border-radius:var(--r);cursor:pointer;position:relative;transition:transform .25s ease;will-change:transform;touch-action:pan-y}
+.book-item.swiped{transform:translateX(-70px)}
+.book-color-bar{width:3px;border-radius:var(--r) 0 0 var(--r);flex-shrink:0}
+.book-main{flex:1;min-width:0;padding:8px 10px;display:flex;flex-direction:column;gap:0}
+.book-title-row{display:flex;align-items:center;justify-content:space-between;gap:6px}
+.book-title{font-size:12px;color:var(--ink);font-weight:500;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.book-total{font-size:10px;color:var(--ink3);white-space:nowrap;flex-shrink:0}
+.book-log-list{margin-top:4px;display:none;border-top:1px dashed var(--border);padding-top:5px}
+.book-log-list.open{display:block}
+.book-log-entry{font-size:10px;color:var(--ink2);padding:2px 0;line-height:1.5}
+.book-log-entry span{color:var(--ink3)}
+.book-log-btn{background:none;border:none;padding:6px 12px 6px 0;cursor:pointer;flex-shrink:0;display:flex;align-items:center}
+.book-log-btn svg{width:15px;height:15px;stroke:var(--ink3);fill:none;stroke-width:1.8}
+.book-cover-thumb{width:38px;min-height:56px;align-self:stretch;object-fit:cover;flex-shrink:0;display:block;border-right:1px solid var(--border)}

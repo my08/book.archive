@@ -1,0 +1,13 @@
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+:root{
+  --bg:#F5F0E8;--bg2:#EDE8DC;--bg3:#E2DDD0;
+  --ink:#1C1A14;--ink2:#5C5847;--ink3:#9A9585;
+  --accent:#2C4A2E;
+  --amber:#8B6914;--red:#C0392B;
+  --border:#C8C3B4;--border2:#A8A396;
+  --mono:'JetBrains Mono',monospace;
+  --r:8px;
+  --safe-top:env(safe-area-inset-top,0px);
+  --safe-bottom:env(safe-area-inset-bottom,0px)
+}
+body{font-family:var(--mono);background:var(--bg);color:var(--ink);height:100dvh;overflow:hidden;font-size:13px;line-height:1.5;display:flex;flex-direction:column}

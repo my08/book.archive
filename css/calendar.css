@@ -1,0 +1,14 @@
+.cal-header{display:flex;align-items:center;justify-content:space-between;padding:14px 16px 10px}
+.cal-month{font-size:13px;font-weight:500;letter-spacing:.08em;color:var(--ink)}
+.cal-nav{background:none;border:none;cursor:pointer;color:var(--ink3);font-size:18px;padding:4px 8px;line-height:1}
+.cal-grid{padding:0 10px 20px}
+.cal-dow{display:grid;grid-template-columns:repeat(7,1fr);margin-bottom:4px}
+.cal-dow span{text-align:center;font-size:9px;color:var(--ink3);letter-spacing:.06em;text-transform:uppercase;padding:4px 0}
+.cal-days{display:grid;grid-template-columns:repeat(7,1fr);gap:3px}
+.cal-day{border-radius:var(--r);min-height:52px;padding:4px;background:var(--bg2);border:1px solid var(--border);position:relative;display:flex;flex-direction:column;gap:2px}
+.cal-day.other-month{background:transparent;border-color:transparent}
+.cal-day.today .cal-day-num{color:var(--accent);font-weight:500}
+.cal-day-num{font-size:10px;color:var(--ink3);text-align:right}
+.cal-covers{display:flex;flex-wrap:wrap;gap:2px;margin-top:2px}
+.cal-cover{width:18px;height:24px;border-radius:2px;object-fit:cover;background:var(--bg3);flex-shrink:0}
+.cal-cover-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}

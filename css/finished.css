@@ -1,0 +1,27 @@
+.finished-controls{padding:8px 13px 0;display:flex;gap:6px}
+.sort-btn{font-family:var(--mono);font-size:10px;letter-spacing:.06em;text-transform:uppercase;background:none;border:1px solid var(--border);border-radius:var(--r);padding:5px 9px;cursor:pointer;color:var(--ink3)}
+.sort-btn.active{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.finished-list{padding:8px 13px 24px}
+.finished-item{border:1px solid var(--border);border-radius:var(--r);background:var(--bg2);overflow:hidden;margin-bottom:5px}
+.finished-header{padding:9px 12px;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:8px}
+.finished-title-wrap{display:flex;align-items:center;gap:8px;min-width:0}
+.finished-title{font-size:12px;font-weight:500;color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.finished-stars{color:var(--amber);font-size:11px;flex-shrink:0}
+.finished-chev{color:var(--ink3);font-size:12px;flex-shrink:0;transition:transform .2s}
+.finished-chev.open{transform:rotate(180deg)}
+.finished-notes{border-top:1px solid var(--border);padding:9px 12px 12px;display:none}
+.finished-notes.open{display:block}
+.note-entry{margin-bottom:7px;padding-bottom:7px;border-bottom:1px dashed var(--border)}
+.note-entry:last-child{border:none;margin:0;padding:0}
+.note-text{font-size:11px;color:var(--ink2);line-height:1.7}
+.note-date{font-size:10px;color:var(--ink3);margin-top:2px}
+
+.star-row{display:flex;justify-content:center;gap:10px;margin:14px 0}
+.star-btn{background:none;border:none;cursor:pointer;font-size:28px;padding:4px}
+.star-btn.lit{color:var(--amber)}
+.star-btn.dim{color:var(--border)}
+
+.firework-overlay{position:fixed;inset:0;z-index:500;pointer-events:none;display:none}
+.firework-overlay.show{display:block}
+.fw-emoji{position:absolute;font-size:24px;opacity:0;animation:flyup 3s ease-out forwards}
+@keyframes flyup{0%{opacity:1;transform:translate(0,0) scale(.4)}60%{opacity:1}100%{opacity:0;transform:translate(var(--dx),var(--dy)) scale(1.1)}}
